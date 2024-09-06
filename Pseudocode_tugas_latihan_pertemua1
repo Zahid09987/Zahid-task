@@ -1,0 +1,87 @@
+Soal nomor 1
+
+Function FPB(a, b)
+    While b ≠ 0
+        temp = b
+        b = a % b
+        a = temp
+    End While
+    Return a
+
+Function KPK(a, b)
+    fpb = FPB(a, b)
+    kpk = (a * b) / fpb
+    Return kpk
+
+// Main Program
+a = 3
+b = 4
+kpk = KPK(a, b)
+Print "KPK dari", a, "dan", b, "adalah", kpk
+
+Soal nomor 2
+
+// Fungsi untuk menukar posisi manggis dan pisang menggunakan piring 3
+Function TukarPosisi(x, y)
+    temp = x  // Pindahkan manggis dari piring 1 ke piring 3
+    x = y     // Pindahkan pisang dari piring 2 ke piring 1
+    y = temp  // Pindahkan manggis dari piring 3 ke piring 2
+    Return x, y
+
+// Main Program
+x = "Manggis"
+y = "Pisang"
+Print "Sebelum penukaran:", "Piring 1:", x, "Piring 2:", y
+x, y = TukarPosisi(x, y)
+Print "Setelah penukaran:", "Piring 1:", x, "Piring 2:", y
+
+Soal nomor 3
+
+Function HitungLuasSegitiga(alas, tinggi)
+    luas = 0.5 * alas * tinggi
+    Return luas
+
+// Main Program
+alas = 25
+tinggi = 30
+luas = HitungLuasSegitiga(alas, tinggi)
+Print "Luas segitiga dengan alas", alas, "dan tinggi", tinggi, "adalah", luas
+
+Soal nomor 4
+
+Function HitungLuasJajarGenjang(panjang, tinggi)
+    luas = panjang * tinggi
+    Return luas
+
+// Main Program
+panjang = 5
+tinggi = 3
+luas = HitungLuasJajarGenjang(panjang, tinggi)
+Print "Luas jajar genjang dengan panjang", panjang, "dan tinggi", tinggi, "adalah", luas
+
+Soal nomor 5
+
+Function HitungVolumeTabung(jari_jari, tinggi)
+    pi = 3.1416
+    volume = pi * (jari_jari ^ 2) * tinggi
+    Return volume
+
+// Main Program
+jari_jari = 3
+tinggi = 5
+volume = HitungVolumeTabung(jari_jari, tinggi)
+Print "Volume tabung dengan jari-jari", jari_jari, "dan tinggi", tinggi, "adalah", volume
+
+Soal nomor 6
+
+Function HitungVolumeKerucut(diameter, tinggi)
+    pi = 3.1416
+    jari_jari = diameter / 2
+    volume = (1/3) * pi * (jari_jari ^ 2) * tinggi
+    Return volume
+
+// Main Program
+diameter = 5
+tinggi = 4
+volume = HitungVolumeKerucut(diameter, tinggi)
+Print "Volume kerucut dengan diameter", diameter, "dan tinggi", tinggi, "adalah", volume
